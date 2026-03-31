@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Toast thông báo</title>
+    <style>
+        .open-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #1a1a1a;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .toast {
+
+            display: none;
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+        }
+
+        .close-btn {
+            background: rgba(0,0,0,0.2);
+            color: #fff;
+            padding: 4px 10px;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+
+        /*   ACTIVITY   */
+        #toast-toggle:checked~.toast {
+            display: inline-block;
+            margin-left: 60px;
+        }
+    </style>
+</head>
+<body>
+<!--    Checkbox ẩn   -->
+<input type="checkbox" id="toast-toggle" hidden>
+<!--   Nút bấm   -->
+<label for="toast-toggle" class="open-btn">Hiện thông báo</label>
+<!--   Toast   -->
+<div class="toast">
+    <span>🎉 Lưu thành công!</span>
+    <label for="toast-toggle" class="close-btn">X</label>
+</div>
+</body>
+</html>

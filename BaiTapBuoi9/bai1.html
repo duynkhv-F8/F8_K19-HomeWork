@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bai tap 1</title>
+    <style>
+        /*   ROW 1  */
+        .item {
+            display: inline-block;
+            margin-right: 60px;
+            text-align: center;
+        }
+
+        .square {
+            width: 150px;
+            height: 150px;
+            border: 6px solid red;
+        }
+
+        .rectangle {
+            width: 200px;
+            height: 130px;
+            border: 6px solid deepskyblue;
+        }
+
+        .triangle-top {
+            width: 0;
+            border-left: 60px solid transparent;
+            border-right: 60px solid transparent;
+            border-bottom: 150px solid darkseagreen;
+        }
+
+        .triangle-bottom {
+            width: 0;
+            border-left: 60px solid transparent;
+            border-right: 60px solid transparent;
+            border-top: 150px solid orange;
+        }
+
+        .triangle-left {
+            width: 0;
+            border-top: 60px solid transparent;
+            border-bottom: 60px solid transparent;
+            border-right: 150px solid darkviolet;
+        }
+
+        .triangle-right {
+            width: 0;
+            border-top: 60px solid transparent;
+            border-bottom: 60px solid transparent;
+            border-left: 150px solid brown;
+        }
+
+        .trapezium {
+            width: 150px;
+            border-left: 60px solid transparent;
+            border-right: 60px solid transparent;
+            border-bottom: 150px solid lightseagreen;
+        }
+
+        /*   ROW 2  */
+
+        .triangle-wide {
+            width: 0;
+            border-left: 120px solid transparent;
+            border-right: 120px solid transparent;
+            border-bottom: 60px solid darkgreen;
+        }
+
+        .triangle-sharp {
+            width: 0;
+            border-left: 30px solid transparent;
+            border-right: 30px solid transparent;
+            border-bottom: 120px solid saddlebrown;
+        }
+
+        .triangle-isosceles {
+            width: 0;
+            border-left: 30px solid transparent;
+            border-right: 30px solid transparent;
+            border-bottom: 60px solid darkgreen;
+        }
+
+        .arrow-right {
+            width: 0;
+            border-right: 60px solid transparent;
+            border-top: 30px solid transparent;
+            border-bottom: 30px solid transparent;
+            border-left: 60px solid mediumseagreen;
+        }
+
+        .arrow-left {
+            width: 0;
+            border-left: 60px solid transparent;
+            border-top: 30px solid transparent;
+            border-bottom: 30px solid transparent;
+            border-right: 60px solid darkviolet;
+        }
+
+        .ribbon {
+            width: 60px;
+            border-left: 30px solid firebrick;
+            border-top: 30px solid firebrick;
+            border-bottom: 30px solid firebrick;
+            border-right: 30px solid transparent;
+        }
+
+        /*   ROW 3  */
+        .f {
+            margin-top: 60px;
+            height: 300px;
+            width: 150px;
+            border-left: 30px solid brown;
+            border-top: 30px solid brown;
+        }
+
+        .f-middle {
+            width: 150px;
+            border-top: 30px solid brown;
+            margin-top: 120px;
+        }
+
+        .eight {
+            height: 120px;
+            width: 150px;
+            border: 30px solid brown;
+        }
+
+        .eight-2 {
+            height: 120px;
+            width: 150px;
+            border: 30px solid brown;
+            margin-top: -26px;
+        }
+
+        .f8 {
+            padding-left: 190px;
+        }
+    </style>
+</head>
+<body>
+<div class="row">
+    <!--    hàng 1   -->
+    <div class="item">
+        <div class="square"></div>
+        <p>1. Hình vuông</p>
+    </div>
+    <div class="item">
+        <div class="rectangle"></div>
+        <p>2. Hình chữ nhật</p>
+    </div>
+    <div class="item">
+        <div class="triangle-top"></div>
+        <p>3. Tam giác lên</p>
+    </div>
+    <div class="item">
+        <div class="triangle-bottom"></div>
+        <p>4. Tam giác xuống</p>
+    </div>
+    <div class="item">
+        <div class="item">
+            <div class="triangle-left"></div>
+            <p>5. Tam giác trái</p>
+        </div>
+    </div>
+    <div class="item">
+        <div class="item">
+            <div class="triangle-right"></div>
+            <p>6. Tam giác phải</p>
+        </div>
+    </div>
+    <div class="item">
+        <div class="trapezium"></div>
+        <p>7. Hình thang</p>
+    </div>
+</div>
+<div class="row">
+    <div class="item">
+        <div class="triangle-wide"></div>
+        <p>8. Tam giác rộng</p>
+    </div>
+    <div class="item">
+        <div class="triangle-sharp"></div>
+        <p>9. Tam giác nhọn</p>
+    </div>
+    <div class="item">
+        <div class="triangle-isosceles"></div>
+        <p>10. Tam giác cân</p>
+    </div>
+    <div class="item">
+        <div class="arrow-right"></div>
+        <p>11. Mũi tên phải</p>
+    </div>
+    <div class="item">
+        <div class="item">
+            <div class="arrow-left"></div>
+            <p>12. Mũi tên trái</p>
+        </div>
+    </div>
+    <div class="item">
+        <div class="item">
+            <div class="ribbon"></div>
+            <p>13. Ribbon/Lá cờ</p>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="item">
+        <div class="f">
+            <div class="f-middle"></div>
+        </div>
+
+    </div>
+    <div class="item">
+        <div class="eight"></div>
+        <div class="eight-2"></div>
+    </div>
+    <p class="f8">14. F8</p>
+</div>
+</body>
+</html>
