@@ -18,6 +18,7 @@
         margin-top: 60px;
     }
 
+    /* Overlay mặc định ẩn */
     .overlay {
         display: none;
         width: 100vw;
@@ -53,16 +54,21 @@
     }
 
     /*      Activity    */
+    /* Khi checkbox được check → hiện overlay */
     #modal-toggle:checked ~ .overlay {
         display: block;
     }
 </style>
 <body>
+
 <input type="checkbox" id="modal-toggle" hidden>
+<!--    Nút mở      -->
 <label for="modal-toggle" class="open-btn">Mở modal</label>
+<!--    overlay (label để click nền đóng)    -->
 <label class="overlay" for="modal-toggle">
     <label for="modal-toggle" class="modal">
         <span>Đây là nội dung thông báo!</span>
+        <!-- nút đóng -->
         <label for="modal-toggle" class="close-btn">Đóng</label>
     </label>
 </label>
