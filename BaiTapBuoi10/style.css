@@ -1,0 +1,140 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333333;
+}
+
+html {
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+}
+
+ul, li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* HEADER */
+.header {
+    background-color: #ffffff;
+    border-bottom: 0.0625rem solid #dddddd;
+    width: 100%;
+    vertical-align: middle;
+}
+
+/* CONTAINER */
+.container {
+    max-width: 75rem;
+    margin: 0 auto;
+    padding: 0.5rem 0;
+}
+
+/* LOGO */
+.logo {
+    vertical-align: middle;
+    width: 2.375rem;
+}
+
+nav {
+    display: inline-block;
+    margin-left: 1.5625rem;
+}
+
+/* MENU */
+.menu {
+    display: inline-block;
+}
+
+.menu-main {
+    display: inline-block;
+    position: relative;
+    font-weight: bold;
+    color: #333333;
+    padding: 0.375rem 0;
+    margin-right: 1.5625rem;
+    cursor: pointer;
+}
+
+.menu-main:hover {
+    color: #d62828;
+    border-bottom: 0.125rem solid #d62828;
+}
+
+.menu-main:hover .drop-down {
+    display: block;
+}
+
+/* ICON DROPDOWN */
+.icon-dropdown {
+    font-size: 0.625rem;
+    color: #555555;
+    vertical-align: middle;
+    margin-left: 0.3rem;
+}
+
+/* DROPDOWN */
+.drop-down {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    border: 0.0625rem solid #dddddd;
+    min-width: 12.5rem;
+    top: 2rem;
+    font-weight: normal;
+}
+
+.drop-down > li {
+    padding: 0.375rem 0.625rem;
+}
+
+.drop-down > li:hover {
+    background-color: #f5f5f5;
+    color: #d62828;
+}
+
+
+/* ICON SUBMENU */
+.icon-sub {
+    display: none;
+    position: absolute;
+    top: 0.625rem;
+    left: 90%;
+    font-size: 0.625rem;
+    color: #777777;
+}
+
+.drop-down > li:hover .icon-sub {
+    display: inline-block;
+}
+
+/* SUBMENU */
+.society, .area, .finance, .expert {
+    position: relative;
+    font-weight: normal;
+}
+
+.sub-menu-society, .sub-menu-area, .sub-menu-finance, .sub-menu-expert {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background-color: #ffffff;
+    border: 0.0625rem solid #dddddd;
+    min-width: 12.5rem;
+}
+
+.society:hover .sub-menu-society, .area:hover .sub-menu-area, .finance:hover .sub-menu-finance, .expert.sub-menu-expert {
+    display: block;
+}
+
+.sub-menu-society li, .sub-menu-area li, .sub-menu-finance li, .sub-menu-expert li {
+    padding: 0.375rem 0.625rem;
+}
+
+.sub-menu-society li:hover, .sub-menu-area li:hover, .sub-menu-finance li:hover, .sub-menu-expert li:hover {
+    background-color: #f5f5f5;
+    color: #d62828;
+}

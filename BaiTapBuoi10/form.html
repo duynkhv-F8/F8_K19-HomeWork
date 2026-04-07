@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>XÂY DỰNG FORM TƯ VẤN VỚI TOOLTIP</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+<div class="modal-form">
+    <input type="checkbox" id="modal-toggle">
+    <label for="modal-toggle" class="modal-toggle">Tư vấn ngay</label>
+    <div class="overlay">
+        <label for="modal-toggle"></label>
+        <div class="modal">
+            <form action="https://api-gateway.fullstack.edu.vn/action_page.php">
+                <h2>Đăng kí tư vấn</h2>
+                <p>Điền thông tin để được tư vấn lộ trình học phù hợp</p>
+                <label for="modal-toggle" class="close-btn">&times;</label>
+                <div class="container">
+                    <div class="user-info">
+                        <label for="name">Họ và tên</label>
+                        <span>*</span>
+                        <input type="text" placeholder="Nguyễn Văn A" id="name" name="name" required>
+                        <div class="tooltip">
+                            <span>Nhập họ và tên đầy đủ của bạn</span>
+                        </div>
+                    </div>
+                    <div class="user-info">
+                        <label for="phone">Số điện thoại</label>
+                        <span>*</span>
+                        <input type="tel" placeholder="0912345678" id="phone" name="phone" required>
+                        <div class="tooltip">
+                            <span>Số điện thoại để chúng tôi liên hệ tư vấn</span>
+                        </div>
+                    </div>
+                    <div class="user-info">
+                        <label for="email">Email</label>
+                        <input type="email" placeholder="example@gmail.com" id="email" name="mail">
+                        <div class="tooltip">
+                            <span>Email nhận thông tin khóa học (không bắt buộc)</span>
+                        </div>
+                    </div>
+                    <div class="courses">
+                        <span>Khóa học quan tâm</span>
+                        <span>*</span>
+                        <div class="course">
+                            <input type="checkbox" id="html-css" name="course[]" value="html-css" required>
+                            <div class="tooltip-course">
+                                <span>Khóa nền tảng xây dựng giao diện web</span>
+                            </div>
+                            <label for="html-css">HTML & CSS</label>
+                        </div>
+                        <div class="course">
+                            <input type="checkbox" id="js" name="course[]" value="js">
+                            <div class="tooltip-course">
+                                <span>Ngôn ngữ lập trình cho web động</span>
+                            </div>
+                            <label for="js">JavaScript</label>
+                        </div>
+                        <div class="course">
+                            <input type="checkbox" id="frontend" name="course[]" value="frontend">
+                            <div class="tooltip-course">
+                                <span>Lộ trình hoàn chỉnh trở thành Front-end Developer</span>
+                            </div>
+                            <label for="frontend">Front-end lộ trình</label>
+                        </div>
+                        <div class="course">
+                            <input type="checkbox" id="reactjs" name="course[]" value="reactjs">
+                            <div class="tooltip-course">
+                                <span>Thư viện JavaScript phổ biến nhất hiện nay</span>
+                            </div>
+                            <label for="reactjs">ReactJS</label>
+                        </div>
+                        <div class="course">
+                            <input type="checkbox" id="advise" name="course[]" value="advise">
+                            <div class="tooltip-course">
+                                <span>Chúng tôi sẽ tư vấn lộ trình phù hợp với bạn</span>
+                            </div>
+                            <label for="advise">Chưa rõ – cần tư vấn</label>
+                        </div>
+                    </div>
+                    <button type="submit">ĐĂNG KÝ TƯ VẤN NGAY</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
