@@ -1,0 +1,282 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Roboto, sans-serif;
+}
+
+body {
+    background-color: #f8f9fa;
+}
+
+.container {
+    width: 1150px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.desc {
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #2c3e50;
+    text-align: center;
+    margin: 25px 0;
+}
+
+p {
+    font-size: 15px;
+    color: #7f8c8d;
+    text-align: center;
+}
+
+p + p {
+    margin-top: 5px;
+}
+
+.row {
+    display: flex;
+    gap: 25px;
+}
+
+.row + .row {
+    margin-bottom: 50px;
+}
+
+.card {
+    position: relative;
+    width: 350px;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+.card:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+.top {
+    position: absolute;
+    width: 100%;
+    padding: 20px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+}
+
+.bottom {
+    position: absolute;
+    width: 100%;
+    padding: 0 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    bottom: 206px;
+}
+
+.for-sale {
+    padding: 6px 16px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #e74c3c;
+    border-radius: 20px;
+}
+
+.for-rent {
+    padding: 6px 16px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #e67e22;
+    border-radius: 20px;
+}
+
+.left > .mdi {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #2c3e50;
+    color: #ffffff;
+}
+
+img {
+    height: 200px;
+    width: 100%;
+    border-radius: 12px 12px 0 0;
+}
+
+.house {
+    padding: 6px 16px;
+    border-radius: 20px;
+    background-color: #34495e;
+    font-size: 12px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.price {
+    padding: 8px 20px;
+    border-radius: 20px;
+    background-color: #16a085;
+    font-size: 14px;
+    font-weight: 700;
+    color: #ffffff;
+}
+.right {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+}
+.mdi-heart-outline {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    color: #e74c3c;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.mdi-heart-outline:hover {
+    display: none;
+}
+.mdi-share-variant{
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    color: #7f8c8d;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.mdi-share-variant:hover {
+    background-color: #3498db;
+    color: #ffffff;
+}
+.mdi-heart{
+    display: none;
+    background-color: #e74c3c;
+    color: #ffffff;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.mdi-heart-outline:hover + .mdi-heart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.infor {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    padding: 18px;
+}
+
+.map {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.mdi-map-marker {
+    color: #95a5a6;
+}
+
+.mdi-map-marker + span {
+    color: #95a5a6;
+    font-size: 12px;
+}
+
+.infor > h4 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.seller {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.name {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.mdi-account {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #bdc3c7;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mdi-account + span {
+    font-size: 12px;
+    color: #7f8c8d;
+}
+
+.time {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.mdi-calendar {
+    color: #95a5a6;
+}
+
+.mdi-calendar + span {
+    font-size: 12px;
+    color: #95a5a6;
+}
+
+.footer {
+    display: flex;
+    gap: 25px;
+    padding: 10px 0 20px 0;
+    margin: 0 18px;
+    border-top: 1px solid #ecf0f1;
+}
+
+.area, .bathroom, .bedroom {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer .mdi {
+    color: #95a5a6;
+}
+
+.footer .mdi + span {
+    color: #7f8c8d;
+    font-size: 12px;
+}

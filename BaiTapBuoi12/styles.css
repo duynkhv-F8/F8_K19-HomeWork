@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: Roboto, sans-serif;
+}
+body{
+    background: #ebf5fe;
+    color: #666666;
+}
+.container{
+    width: 60vw;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+}
+.row{
+    display: flex;
+    gap:20px;
+}
+.card{
+    width: calc((60vw - 40px)/3);
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    border: 3px solid #e0e0e0;
+}
+.card-1:hover{
+    border: 3px solid #ff6b6b;
+}
+.card-2:hover{
+    border: 3px solid #4ecdc4;
+}
+.card-3:hover{
+    border: 3px solid #f9a825;
+}
+.card-4:hover{
+    border: 3px solid #5e9cff;
+}
+.card-5:hover{
+    border: 3px solid #9b59b6;
+}
+.card-6:hover{
+    border: 3px solid #7cb342;
+}
+.header{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+.mdi{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    font-size: 32px;
+    color: white;
+}
+.mdi-brush{
+    background-color: #ff6b6b;
+}
+.mdi-view-dashboard{
+    background-color: #4ecdc4;
+}
+.mdi-flash{
+    background-color: #f9a825;
+}
+.mdi-palette{
+    background-color: #5e9cff;
+}
+.mdi-layers{
+    background-color: #9b59b6;
+}
+.mdi-email{
+    background-color: #7cb342;
+}
+h4{
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.3;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    color: #333333;
+}
+p{
+    font-size: 15px;
+    font-weight: 400;
+    color: #666666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+a{
+    font-size: 15px;
+    font-weight: 500;
+    color: #2196f3;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
