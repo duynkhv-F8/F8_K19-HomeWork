@@ -1,0 +1,69 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    font-size: 2rem;
+    color: white;
+}
+.container{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+.strip{
+    position: relative;
+    width: 20%;
+    min-height: 100vh;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.strip-1{
+    background-color: forestgreen;
+}
+.strip-2{
+    background-color: khaki;
+}
+.strip-3{
+    background-color: dodgerblue;
+}
+.strip-4{
+    background-color: orange;
+}
+.strip-5{
+    background-color: violet;
+}
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    display:none;
+}
+img{
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: absolute;
+    top:0;
+    left:0;
+}
+/*  Hover   */
+.strip:hover img, .strip:hover .overlay{
+    display: block;
+}
+.container:hover .strip{
+    width: 10%;
+}
+
+.container .strip:hover{
+    width: 70%;
+}
