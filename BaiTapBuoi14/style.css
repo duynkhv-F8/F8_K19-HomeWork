@@ -1,0 +1,242 @@
+/* --- RESET --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* --- BASE --- */
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    background: #e8e8e8;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* --- DESKTOP --- */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    opacity: 0;
+    visibility: hidden;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 998;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #3a3a3a;
+    font-weight: bold;
+    position: sticky;
+    top: 0;
+    z-index: 1001;
+    padding: 1rem 2rem;
+}
+
+.header__logo {
+    font-size: 2.8rem;
+    font-style: italic;
+    color: #ffffff;
+    z-index: 1001;
+}
+
+.header__hamburger {
+    display: none;
+}
+
+.nav__close-btn {
+    display: none;
+}
+
+.nav__list {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav__link {
+    color: #f9f9f9;
+    font-size: 1.6rem;
+}
+
+.header__checkbox {
+    display: none;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    gap: 1.5rem;
+    padding: 1.5rem;
+}
+
+.container__heading {
+    font-size: 2rem;
+    margin: 2rem 0;
+}
+
+.container__paragraph {
+    margin-bottom: 2rem;
+    line-height: 1.5;
+}
+
+.container__content {
+    flex: 1;
+}
+
+.cards {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: calc((100% - 2rem) / 3);
+    border: 3px solid #000000;
+    background-color: #ffffff;
+}
+
+.card__header {
+    background-color: #3a3a3a;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 1.25rem;
+    padding: 1rem;
+}
+
+.card__body {
+    padding: 1rem;
+    line-height: 1.5;
+}
+
+.container__sidebar {
+    padding: 1.5rem;
+    color: #f8fcff;
+    background-color: #3a3a3a;
+    width: 300px;
+    min-height: 400px;
+}
+
+/* --- TABLET --- */
+@media screen and (max-width: 768px) {
+    .header {
+        padding: 1rem;
+    }
+
+    .container {
+        gap: 1.5rem;
+        padding: 1rem;
+    }
+
+    .card {
+        width: calc((100% - 1rem) / 2);
+    }
+
+    .header__hamburger {
+        display: inline-block;
+        font-size: 2.8rem;
+        color: white;
+    }
+
+    .header__nav {
+        position: fixed;
+        width: 280px;
+        background-color: #3a3a3a;
+        top: 0;
+        right: -280px;
+        height: 100vh;
+        box-shadow: -2px 0 10px rgba(0, 0, 0, 0.3);
+        padding: 2rem 1.5rem;
+        z-index: 1000;
+        transition: right 0.3s ease;
+    }
+
+    .nav__close-btn {
+        display: block;
+        position: absolute;
+        right: 3rem;
+        top: 4rem;
+        font-size: 3.8rem;
+        color: white;
+        cursor: pointer;
+    }
+
+    .nav__list {
+        margin-top: 10rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .header__nav > ul > li {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 1rem;
+    }
+
+    .container__sidebar {
+        width: 250px;
+        padding: 1rem;
+    }
+}
+
+/* --- MOBILE --- */
+@media screen and (max-width: 480px) {
+    .header, .container {
+        max-width: 100%;
+    }
+
+    .header {
+        padding: 1rem;
+    }
+
+    .container__heading {
+        font-size: 1.5rem;
+        margin: 2rem 0;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .cards {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .container__sidebar {
+        width: 100%;
+        min-height: auto;
+    }
+}
+
+/*  Checkbox Hack   */
+.header__checkbox:checked ~ .header .header__nav {
+    right: 0;
+}
+
+.header__checkbox:checked ~ .overlay {
+    opacity: 1;
+    visibility: visible;
+}

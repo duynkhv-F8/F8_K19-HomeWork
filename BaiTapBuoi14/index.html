@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Responsive Card Layout</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- CHECKBOX HACK -->
+<input type="checkbox" id="menu-toggle" class="header__checkbox">
+<label for="menu-toggle" class="overlay"></label>
+<!-- HEADER -->
+<header class="header">
+    <p class="header__logo">My Website</p>
+
+    <label for="menu-toggle" class="header__hamburger">
+        <span class="mdi mdi-menu"></span>
+    </label>
+<!-- MENU -->
+    <nav class="header__nav">
+        <label for="menu-toggle" class="nav__close-btn">
+            <span>&times;</span>
+        </label>
+        <ul class="nav__list">
+            <li><a href="#" class="nav__link">Link 1</a></li>
+            <li><a href="#" class="nav__link">Link 2</a></li>
+            <li><a href="#" class="nav__link">Link 3</a></li>
+        </ul>
+    </nav>
+</header>
+<!-- MAIN -->
+<main class="container">
+<!-- CONTENT AREA -->
+    <div class="container__content">
+        <h1 class="container__heading ">This is the main heading</h1>
+        <p class="container__paragraph">Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion
+            daikon amaranth tatsoi
+            tomatillo melon azuki bean garlic.</p>
+        <p class="container__paragraph">Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi
+            pea sprouts fava bean
+            collard greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.</p>
+<!-- CARD -->
+        <div class="cards">
+            <div class="card">
+                <div class="card__header">Card One</div>
+                <p class="card__body">Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce kohlrabi
+                    amaranth water spinach avocado.</p>
+            </div>
+            <div class="card">
+                <div class="card__header">Card Two</div>
+                <p class="card__body">Daikon napa cabbage asparagus winter purslane kale. Celery potato scallion desert
+                    raisin horseradish spinach carrot soko.</p>
+            </div>
+            <div class="card">
+                <div class="card__header">Card Three</div>
+                <p class="card__body">Lotus root water spinach fennel kombu maize bamboo shoot green bean swiss chard
+                    seakale pumpkin onion chickpea gram corn pea.</p>
+            </div>
+            <div class="card">
+                <div class="card__header">Card Four</div>
+                <p class="card__body">Lotus root water spinach fennel kombu maize bamboo shoot green bean swiss chard
+                    seakale pumpkin onion chickpea gram corn pea.</p>
+            </div>
+            <div class="card">
+                <div class="card__header">Card Five</div>
+                <p class="card__body">Nori grape silver beet broccoli kombu beet greens fava bean potato quandong
+                    celery. Bunya nuts black-eyed pea prairie turnip leek lentil turnip greens parsnip.</p>
+            </div>
+        </div>
+    </div>
+<!-- SIDEBAR -->
+    <aside class="container__sidebar">
+        <p>Have you discovered all of the other excellent content on this website?</p>
+    </aside>
+</main>
+</body>
+</html>
