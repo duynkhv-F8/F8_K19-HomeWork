@@ -59,6 +59,7 @@ a {
 
 .header__hamburger {
     display: none;
+    cursor: pointer;
 }
 
 .nav__close-btn {
@@ -173,11 +174,15 @@ a {
         position: absolute;
         right: 3rem;
         top: 4rem;
-        font-size: 3.8rem;
+        font-size: 2.8rem;
         color: white;
         cursor: pointer;
     }
 
+    .nav__close-btn:hover {
+        rotate: 90deg;
+        transition: 0.3s;
+    }
     .nav__list {
         margin-top: 10rem;
         display: flex;
