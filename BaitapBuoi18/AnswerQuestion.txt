@@ -1,0 +1,23 @@
+Bài 1
+1. student.name không bị thay đổi.
+2. student.parent.name có bị thay đổi.
+3. Giải thích:
+- student.name không bị thay đổi vì là kiểu dữ liệu nguyên thủy.
+- student.parent.name có bị thay đổi vì nó là 1 object, cú pháp const mentor = { ...student } là cú pháp sao chép nông
+(shallow copy), khi đó các dữ liệu nguyên thủy sẽ sao chép giá trị, còn kiểu dữ liệu object sẽ sao chép tham chiếu, khi đó
+cả hai biến đều trỏ chung vào một tham chiếu của object `parent`, nên student.parent.name sẽ bị thay đổi theo mentor.parent.name.
+Bài 2
+1. student.parent.name sẽ không bị ảnh hưởng
+2. cách này khác spread (const mentor = { ...student }) vì JSON.parse(JSON.stringify(student)) là deep copy, đầu tiên JSON.stringify(student)
+sẽ ép kiểu student về kiểu string, sau đó JSON.parse sẽ biến chuỗi string đó thành object mới khác với object cũ, và nó
+sẽ có 1 vùng nhớ mới hoàn toàn khi viết mentor.parent.name = 'bo bang' n sẽ ghi giá trị vào vùng nhớ mới và
+student.parent.name sẽ không bị ảnh hưởng
+Bài 3
+1. Mảng có bị thay đổi
+2. Phần tử bên trong bị thay đổi giá trị name vì nó có kiểu dữ liệu là 1 object, mà const newStudents = [...students] là
+cú pháp sao chép nông (shallow copy) nên kiểu dữ liệu object sẽ sao chép tham chiếu, nên newStudents[0].name = 'z' thì
+students[0].name = 'z'
+Bài 4
+- Kết quả sẽ là 999 vì const newUser = { ...user } là cú pháp sao chép nông (shallow copy) nên address là object lồng
+bên trong sẽ sao chép tham chiếu, khi viết newUser.address.location.lat = 999 thì tương tự user.address.location.lat = 999, vì lúc đó
+cả hai biến đều trỏ chung vào một tham chiếu của object `address`.
