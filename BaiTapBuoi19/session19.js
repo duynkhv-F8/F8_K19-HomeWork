@@ -1,78 +1,85 @@
 const products = [
-    {id: 1, name: 'iPhone', price: 2000},
-    {id: 2, name: 'Samsung', price: 1500},
-    {id: 3, name: 'Xiaomi', price: 1000},
-    {id: 4, name: 'Oppo', price: 1200}
+    { id: 1, name: 'iPhone', price: 2000 },
+    { id: 2, name: 'Samsung', price: 1500 },
+    { id: 3, name: 'Xiaomi', price: 1000 },
+    { id: 4, name: 'Oppo', price: 1200 }
 ]
 
 const orders = [
     {
         id: 1,
         items: [
-            {productId: 1, quantity: 2},
-            {productId: 2, quantity: 1}
+            { productId: 1, quantity: 2 },
+            { productId: 2, quantity: 1 }
         ]
     },
     {
         id: 2,
         items: [
-            {productId: 1, quantity: 1},
-            {productId: 3, quantity: 3}
+            { productId: 1, quantity: 1 },
+            { productId: 3, quantity: 3 }
         ]
     },
     {
         id: 3,
         items: [
-            {productId: 2, quantity: 2},
-            {productId: 4, quantity: 1}
+            { productId: 2, quantity: 2 },
+            { productId: 4, quantity: 1 }
         ]
     }
 ]
 
-let productMap = {}
+function findMaxRevenueProduct(products, orders) {
 
-for (let pIdx = 0; pIdx < products.length; pIdx++) {
-    const product = products[pIdx]
+    let productsMap = {}
 
-    productMap[product.id] = product
-}
+    // Khoi tao map
+    for (let pIdx = 0; pIdx < products.length; pIdx++) {
 
-let revenueMap = {}
+        const product = products[pIdx]
 
-for (let oIdx = 0; oIdx < orders.length; oIdx++) {
+        product.totalRevenue = 0
 
-    const order = orders[oIdx]
+        productsMap[product.id] = product
+    }
 
-    for (let iIdx = 0; iIdx < order.items.length; iIdx++) {
+    // Tinh doanh thu
+    for (let oIdx = 0; oIdx < orders.length; oIdx++) {
 
-        const item = order.items[iIdx]
+        const order = orders[oIdx]
 
-        const product = productMap[item.productId]
+        for (let iIdx = 0; iIdx < order.items.length; iIdx++) {
 
-        const revenue = item.quantity * product.price
+            const item = order.items[iIdx]
 
-        if (revenueMap[item.productId] === undefined) {
-            revenueMap[item.productId] = 0
+            const product = productsMap[item.productId]
+
+            if (product) {
+                product.totalRevenue += product.price * item.quantity
+            }
         }
-
-        revenueMap[item.productId] += revenue
     }
+
+    // Tim san pham doanh thu lon nhat
+    let maxProduct = products[0]
+
+    for (let pIdx = 1; pIdx < products.length; pIdx++) {
+
+        const product = products[pIdx]
+
+        if (product.totalRevenue > maxProduct.totalRevenue) {
+            maxProduct = product
+        }
+    }
+
+    return maxProduct
 }
 
-let maxRevenue = 0
-let topProduct = null
+const result = findMaxRevenueProduct(products, orders)
 
-for (let pIdx = 0; pIdx < products.length; pIdx++) {
-
-    const product = products[pIdx]
-
-    const revenue = revenueMap[product.id]
-
-    if (revenue > maxRevenue) {
-        maxRevenue = revenue
-        topProduct = product
-    }
-}
-
-console.log(topProduct)
-console.log('Doanh thu lớn nhất là: ' + maxRevenue)
+console.log(
+    'Sản phẩm ' +
+    result.name +
+    ' có doanh thu lớn nhất, với doanh thu là: ' +
+    result.totalRevenue
+)
