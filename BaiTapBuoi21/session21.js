@@ -13,19 +13,23 @@ const orders = [
     { orderId: 'ORD05', productId: 2, quantity: 1, status: 'completed' }
 ];
 
+const productMap = {}
+
+for (const product of products) {
+    productMap[product.id] = product
+}
+
 const completedOrderDetails = orders
     .filter(order => order.status === 'completed')
     .map(order => {
 
-        const product = products.find(
-            product => product.id === order.productId
-        )
-
+        const product = productMap[order.productId]
+        if(!product) return null;
         return {
             idDonHang: order.orderId,
             tenSanpham: product.name,
             tongTien: product.price * order.quantity
         }
-    })
+    }).filter(item => item !== null);
 
 console.log(completedOrderDetails)
