@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang=vi>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Print invoice</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="invoice">
+<!-- Header -->
+    <header class="invoice-header">
+        <div class="store-infor">
+            <div>
+                <div class="logo">WM</div>
+                <h1 id="seller-name">WinMark 2 Hai Bà Trưng</h1>
+            </div>
+            <p id="seller-description">
+                Cung cấp sản phẩm thời trang cao cấp & thiết kế độc quyền.
+            </p>
+        </div>
+        <div class="invoice-meta">
+            <div class="invoice-type">
+                HÓA ĐƠN BÁN LẺ
+            </div>
+            <p>
+                Mã số:
+                <span id="invoice-no"></span>
+            </p>
+            <p>
+                Ngày bán:
+                <span id="sale-date"></span>
+            </p>
+        </div>
+    </header>
+    <hr>
+<!--    Seller + Customer   -->
+    <section class="billing-info">
+        <div class="seller-section">
+
+            <p>ĐƠN VỊ BÁN HÀNG (SELLER)</p>
+
+            <h2 id="seller-company-name">WinMark 2 Hai Bà Trưng</h2>
+
+            <div class="detail-info">
+                <span class="mdi mdi-map-marker-outline"></span>
+                <span id="seller-address"></span>
+            </div>
+
+            <div class="detail-info">
+                <span class="mdi mdi-phone-outline"></span>
+                <span id="seller-phone"></span>
+            </div>
+
+        </div>
+        <div class="customer-section">
+            <p>KHÁCH HÀNG (BUYER)</p>
+            <h2 id="customer-name">Nguyễn Văn A</h2>
+            <p>
+                Tuổi:
+                <span id="customer-age"></span>
+            </p>
+
+            <div class="detail-info">
+                <span class="mdi mdi-city-variant-outline"></span>
+                <span id="customer-address">Hà Đông, Hà Nội</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Table -->
+    <section class="product-section">
+        <table>
+            <thead>
+                <tr>
+                    <th>STT</th>
+                    <th>TÊN SẢN PHẨM</th>
+                    <th>SIZE</th>
+                    <th>SL</th>
+                    <th>ĐƠN GIÁ</th>
+                    <th>THÀNH TIỀN</th>
+                </tr>
+            </thead>
+            <tbody id="product-list">
+
+            </tbody>
+        </table>
+    </section>
+<!--    Footer  -->
+    <section class="invoice-footer">
+        <div class="promotion-box">
+            <i class="promotion-logo mdi mdi-sale-outline"></i>
+            <div>
+                <h3>KHUYẾN MÃI / TRỢ GIÁ</h3>
+                <p>Khuyến mãi 50% dành cho khách hàng thân thiết</p>
+            </div>
+        </div>
+        <div class="summary">
+            <div class="summary-row">
+                <span>Cộng tiền hàng:</span>
+                <span id="subtotal"></span>
+            </div>
+
+            <div class="summary-row">
+                <span>Khấu trừ giảm giá:</span>
+                <span id="discount"></span>
+            </div>
+
+            <div class="summary-row total">
+                <span>Tổng thanh toán:</span>
+                <span id="final-total"></span>
+            </div>
+        </div>
+    </section>
+</div>
+<script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,180 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #f5f6f8;
+    padding: 30px;
+}
+#invoice{
+    max-width: 1280px;
+    margin: 0 auto;
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+}
+.invoice-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+.store-infor > div {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+.store-infor .logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    padding: 10px 4px;
+}
+.store-infor h1{
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: #172554;
+}
+.store-infor p{
+    color: #666;
+}
+.invoice-meta{
+    text-align: right;
+}
+
+.invoice-type{
+    display: inline-block;
+    padding: 8px 10px;
+    background: #e8fff4;
+    color: #0f9d58;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 16px;
+    border-radius: 6px;
+}
+.invoice-meta p{
+    margin-top: 8px;
+    font-weight: bolder;
+}
+.invoice-meta p + p{
+    color: #666;
+    font-weight: normal;
+}
+#sale-date{
+    color: black;
+    font-weight: normal;
+}
+#invoice-no{
+    color: #666;
+    font-weight: bolder;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #e5e7eb;
+    margin: 30px 0;
+}
+.billing-info{
+    display: flex;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+.seller-section,
+.customer-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.detail-info, #customer-age{
+    color: #666;
+}
+.mdi{
+    margin-right: 6px;
+}
+.billing-info p:first-child{
+    color: #9ca3af;
+    font-size: 13px;
+    border-bottom: 1px solid #e5e7eb;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+thead th{
+    font-size: 13px;
+    padding: 15px 10px;
+    color: #9ca3af;
+    border-bottom: 2px solid #e5e7eb;
+}
+tbody td {
+    text-align: center;
+    padding: 18px 10px;
+}
+
+tbody tr:hover {
+    background: #fafafa;
+}
+tbody td:nth-child(even) {
+    font-weight: bold;
+}
+.invoice-footer{
+    display: flex;
+    margin-top: 80px;
+    gap: 40px;
+    align-items: flex-start;
+    padding-top: 30px;
+    border-top: 1px solid #f1f1f1;
+}
+.promotion-box{
+    display: flex;
+    flex: 1;
+    gap: 10px;
+    padding: 20px;
+    border: 1px solid #d1fae5;
+    background: #f0fdf4;
+    border-radius: 12px;
+}
+.mdi-sale-outline{
+    color: green;
+    font-size: 32px;
+}
+.promotion-box h3{
+    color: green;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+.summary{
+    width: 320px;
+}
+.summary-row{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    font-size: 18px;
+}
+.summary-row:first-child span:first-child{
+    color: #666;
+}
+.summary-row:nth-child(2){
+    color: green;
+}
+.total{
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 2px solid #e5e7eb;
+    font-size: 28px;
+    font-weight: bold;
+}
+.total span:last-child {
+    color: #10b981;
+}
