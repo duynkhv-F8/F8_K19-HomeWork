@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Display Product List By API</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="header-container">
+        <div class="logo">
+            <i class="fa-solid fa-cart-shopping"></i> <span>FakeStore</span>
+        </div>
+        <div class="search-bar">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="Tìm kiếm sản phẩm...">
+        </div>
+        <div class="cart-icon">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span class="cart-badge" id="cart-badge">0</span>
+        </div>
+    </div>
+</header>
+
+<main class="main-layout">
+    <aside class="sidebar">
+        <h3 class="sidebar-title"><i class="fa-solid fa-filter"></i> Danh mục</h3>
+        <ul class="category-list" id="category-list">
+            <li class="category-item active" data-category="all">Tất cả sản phẩm</li>
+            <li class="category-item" data-category="men's clothing">Men's clothing <span class="count">4</span></li>
+            <li class="category-item" data-category="jewelery">Jewelery <span class="count">4</span></li>
+            <li class="category-item" data-category="electronics">Electronics <span class="count">6</span></li>
+            <li class="category-item" data-category="women's clothing">Women's clothing <span class="count">6</span></li>
+        </ul>
+    </aside>
+
+    <section class="products-section">
+        <div class="products-header">
+            <h2 id="current-category-title">Tất cả sản phẩm</h2>
+            <p class="products-count">Hiển thị <span id="total-products">0</span> sản phẩm</p>
+        </div>
+
+        <div class="loader" id="loader">Đang tải sản phẩm...</div>
+
+        <div class="products-grid" id="products-grid"></div>
+    </section>
+</main>
+<script src="main.js"></script>
+</body>
+</html>
