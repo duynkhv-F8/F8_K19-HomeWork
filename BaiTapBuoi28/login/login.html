@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+<form class="app-container" id="app-container">
+    <h2>Đăng nhập</h2>
+    <p style="font-size: 12px; color: gray;">Sử dụng acc test: emilys / emilyspass</p>
+    <div class="form__group">
+        <label for="username">Username</label>
+        <input type="text" id="username" value="emilys">
+    </div>
+    <div class="form__group">
+        <label for="password">Password</label>
+        <input type="password" id="password" value="emilyspass">
+    </div>
+    <button type="submit" id="btn-login" class="btn">Đăng nhập</button>
+    <div id="login-error" class="alert">Sai tài khoản hoặc mật khẩu!</div>
+</form>
+
+<script src="login.js" type="module"></script>
+</body>
+</html>
