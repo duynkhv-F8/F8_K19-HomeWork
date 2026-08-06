@@ -1,0 +1,492 @@
+* {
+
+  margin: 0;
+
+  padding: 0;
+
+  box-sizing: border-box;
+
+}
+
+
+
+body {
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  background-color: #f4f4f4;
+
+}
+
+
+
+.container {
+
+  max-width: 1200px;
+
+  margin: 20px auto;
+
+  padding: 0 10px;
+
+}
+
+
+
+/* --- TAB BAR --- */
+
+.tab-bar {
+
+  display: flex;
+
+  gap: 8px;
+
+  margin-bottom: 12px;
+
+}
+
+
+
+.tab {
+
+  background: #f1f1f1;
+
+  color: #333;
+
+  border-bottom: 2px solid transparent;
+
+  height: 40px;
+
+  width: 50%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-weight: bold;
+
+  font-size: 15px;
+
+  cursor: pointer;
+
+  border-radius: 8px 8px 0 0;
+
+}
+
+
+
+:global(#phone-tab):checked ~ .tab-bar .tab[for='phone-tab'],
+
+:global(#tab-tab):checked ~ .tab-bar .tab[for='tab-tab'] {
+
+  background: linear-gradient(to bottom, white 50%, #ffaab6);
+
+  border-bottom: 3px solid #d70018;
+
+  color: #d70018;
+
+}
+
+.tab:hover {
+  background: linear-gradient(to bottom, white 50%, #eae4e4);
+}
+
+
+/* --- CATEGORIES --- */
+
+.categories {
+
+  display: flex;
+
+  max-width: 100%;
+
+  overflow-x: auto;
+
+  padding: 8px 0;
+
+  gap: 10px;
+
+}
+
+
+
+.category {
+
+  display: flex;
+
+  align-items: center;
+
+  padding: 6px 12px;
+
+  background: #e2e8f0;
+
+  border-radius: 8px;
+
+  flex-shrink: 0;
+
+  cursor: pointer;
+
+}
+
+
+
+.category-img {
+
+  width: 32px;
+
+  height: 32px;
+
+  object-fit: contain;
+
+  margin-right: 6px;
+
+}
+
+
+
+.category-name {
+
+  font-weight: 600;
+
+  font-size: 13px;
+
+  color: #333;
+
+  white-space: nowrap;
+
+}
+
+.category:hover {
+  background: #cccccc;
+}
+
+
+/* --- BRANDS --- */
+
+.brands {
+
+  display: flex;
+
+  max-width: 100%;
+
+  overflow-x: auto;
+
+  padding: 10px 0;
+
+  gap: 8px;
+
+}
+
+
+
+.brand {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 6px 16px;
+
+  border-radius: 10px;
+
+  border: 1px solid #e5e7eb;
+
+  background: #ffffff;
+
+  font-size: 13px;
+
+  font-weight: 500;
+
+  cursor: pointer;
+
+  white-space: nowrap;
+
+}
+
+.brand:hover {
+  border-color: #b8b8b8;
+  background: #ededed;
+}
+
+/* --- PRODUCTS GRID (Chia 4 cột) --- */
+
+.products {
+
+  width: 100%;
+
+  display: flex;
+
+  gap: 10px;
+
+  flex-wrap: wrap;
+
+  margin-top: 10px;
+
+}
+
+
+
+.product {
+
+  border-radius: 10px;
+
+  background-color: #ffffff;
+
+  /* (100% - 3*10px gap) / 4 card = 4 cột chuẩn đét */
+
+  width: calc((100% - 30px) / 4);
+
+  padding: 12px;
+
+  position: relative;
+
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.08);
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: space-between;
+
+}
+
+
+
+.product-discount {
+
+  background-color: #d70018;
+
+  color: white;
+
+  position: absolute;
+
+  font-size: 11px;
+
+  font-weight: bold;
+
+  padding: 3px 8px;
+
+  top: 0;
+
+  left: 0;
+
+  border-radius: 0 0 8px 0;
+
+}
+
+
+
+.product-installment {
+
+  position: absolute;
+
+  right: 8px;
+
+  top: 8px;
+
+  font-size: 11px;
+
+  font-weight: bold;
+
+  padding: 2px 6px;
+
+  color: #2b6cb0;
+
+  background-color: #f0f7ff;
+
+  border-radius: 4px;
+
+}
+
+
+
+.product-img {
+
+  margin: 25px 0 10px 0;
+
+  text-align: center;
+
+}
+
+
+
+.product-img img {
+
+  max-height: 160px;
+
+  object-fit: contain;
+
+}
+
+
+
+.product-name {
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  color: #333;
+
+  margin: 8px 0;
+
+  line-height: 1.4;
+
+  height: 40px;
+
+  overflow: hidden;
+
+}
+
+
+
+.product-price-container {
+
+  display: flex;
+
+  align-items: baseline;
+
+  gap: 8px;
+
+  margin-bottom: 8px;
+
+}
+
+
+
+.price-new {
+
+  font-size: 15px;
+
+  color: #d70018;
+
+  font-weight: bold;
+
+}
+
+
+
+.price-old {
+
+  font-size: 12px;
+
+  color: #999;
+
+  text-decoration: line-through;
+
+}
+
+
+
+.product-promotion {
+
+  display: flex;
+
+  gap: 6px;
+
+  flex-direction: column;
+
+  margin-bottom: 10px;
+
+}
+
+
+
+.product-promotion-for-member,
+
+.product-promotion-for-student {
+
+  font-size: 11px;
+
+  border-radius: 4px;
+
+  font-weight: 500;
+
+  padding: 4px 6px;
+
+}
+
+
+
+.product-promotion-for-member {
+
+  color: #2b6cb0;
+
+  background-color: #f0f7ff;
+
+}
+
+
+
+.product-promotion-for-student {
+
+  color: #5b21b6;
+
+  background-color: #f5f3ff;
+
+}
+
+
+
+.product-meta {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-top: auto;
+
+  font-size: 13px;
+
+}
+
+
+
+.product-meta-rating {
+
+  color: #d97706;
+
+  font-weight: bold;
+
+}
+
+
+
+.product-meta-favorite {
+
+  color: #2b6cb0;
+
+  cursor: pointer;
+
+}
+
+
+
+/* --- RESPONSIVE --- */
+
+@media screen and (max-width: 1024px) {
+
+  .product {
+
+    width: calc((100% - 20px) / 3); /* Tablet ra 3 cột */
+
+  }
+
+}
+
+
+
+@media screen and (max-width: 640px) {
+
+  .product {
+
+    width: calc((100% - 10px) / 2); /* Mobile ra 2 cột */
+
+  }
+
+}
