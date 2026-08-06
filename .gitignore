@@ -1,0 +1,8 @@
+# Chặn tất cả thư mục node_modules ở mọi cấp
+**/node_modules/
+node_modules/
+
+# Chặn các file build và cache
+dist/
+.vite/
+.DS_Store
